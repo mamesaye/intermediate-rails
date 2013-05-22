@@ -1,8 +1,11 @@
 <br>
-<%= div_for shout do %>
-<%= link_to shout.user.username, shout.user %>
-shouted <br>
-<%= shout.body %> <br>
-<%= link_to time_ago_in_words(shout.created_at), shout %> ago
+	<%= div_for shout do %>
+	<%= gravatar shout.user %>
+	<%= link_to shout.user.username, shout.user %>
+	shouted <br>
+	<div>	
+		<%= render shout.content %> <br>
+	</div>
+	<%= link_to time_ago_in_words(shout.created_at), shout %> ago
 <% end %>
 <br>

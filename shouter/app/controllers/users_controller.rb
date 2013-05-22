@@ -1,9 +1,14 @@
 class UsersController < ApplicationController
   respond_to :html
 
+def index 
+    @user = User.all
+    
+  end 
+
   def show 
     @user = User.find(params[:id])
-    @shout = @user.shouts
+    @shouts = @user.shouts
   end 
 
   def new

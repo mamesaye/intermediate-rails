@@ -1,2 +1,17 @@
-<h1><%= @user.username %></h1>
-<%= render @shout %>
+<h1> <%= follow_button @user %> <%= @user.username %></h1>
+
+<% if @user.followed_users %>
+<h5>follows : </h5>
+<%= @user.followed_users %><br>
+<!-- SELECT "users".* FROM "users" INNER JOIN "following_relationships" ON "users"."id" = "following_relationships"."followed_user_id" WHERE "following_relationships"."follower_id" = 1
+ -->
+ <% end %>
+ <% if @user.followers %>
+<h5>is followed by:</h5> 
+<%= @user.followers  %><br>
+<!-- SELECT "users".* FROM "users" INNER JOIN "following_relationships" ON "users"."id" = "following_relationships"."follower_id" WHERE "following_relationships"."followed_user_id" = 1
+ -->
+ <% end %>
+<br>
+
+<%= render @shouts %>

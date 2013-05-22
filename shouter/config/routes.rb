@@ -5,9 +5,15 @@ Shouter::Application.routes.draw do
 
   resource :session, only: [:new, :create, :destroy]
 
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:index, :new, :create, :show] do
+    post 'follow' => 'following_relationships#create'
+    delete  'follow' => 'following_relationships#destroy'
+  end
 
-   resources :shouts, only: [:create, :show]
+   resources :shouts, only: [:show]
+
+   resources :text_shouts, only:[:create]
+   resources :photo_shouts, only:[:create]
 
 
    #Naming Routes : You can specify a name for any route using the :as option.

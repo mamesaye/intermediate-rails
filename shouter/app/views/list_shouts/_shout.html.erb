@@ -1,0 +1,14 @@
+<br>
+<% @shout_lists.each do |shout_l| %>
+<%= shout_lists.user_id %>
+shouted <br>
+<div>
+	
+		<%= render shout_l.content_type %> <br>
+		<%= render shout_l.content_id %> <br>
+
+</div>
+<%= link_to time_ago_in_words(shout.created_at), shout_l.id %> ago
+<% end %>
+<br>
+	<% end %>

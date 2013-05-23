@@ -1,12 +1,7 @@
 class DashboardsController < ApplicationController
 	def show
-		@text_shout = TextShout.new
-		@photo_shout = PhotoShout.new
-		if current_user
-			@shouts = current_user.shouts
-		end
-	end
-	def list
-		@list_shouts = Shout.all
+		@dashboard = Dashboard.new(current_user) 
+		#dashboard ctller (single declaration) retrieve timeline and timeline retrieve shout 
+		# => single responsability principle (extensive classes)
 	end
 end

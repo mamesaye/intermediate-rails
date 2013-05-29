@@ -8,9 +8,14 @@ module Concerns
 			
  		end
 
-def following? user
+		def following? user
 			followed_user_ids.include? user.id
 		end
+
+		def can_follow? user  # hide foolow button on our page
+			self != user
+		end
+
 		# for controller
 		def follow user
 			followed_users << user

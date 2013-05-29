@@ -1,4 +1,9 @@
-<h1> <%= follow_button @user %> <%= @user.username %></h1>
+<h1> 
+	<% if current_user.can_follow?(@user) %>
+		<%= follow_button @user %> 
+	<% end %>
+	<%= @user.username %>
+</h1>
 
 <% if @user.followed_users %>
 <h5>follows : </h5>

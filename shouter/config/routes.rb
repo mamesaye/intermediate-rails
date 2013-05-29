@@ -15,6 +15,8 @@ Shouter::Application.routes.draw do
    resources :text_shouts, only:[:create]
    resources :photo_shouts, only:[:create]
 
+   resources :hashtags, only: [:show]
+
 
    #Naming Routes : You can specify a name for any route using the :as option.
     #match '/zombies/:name' => 'zombies#index', :as => 'graveyard'

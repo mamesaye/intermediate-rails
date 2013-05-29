@@ -1,0 +1,12 @@
+adama@adama-OptiPlex-780:~/Documents/mmfa/THOUGHTBOT/intermediate-rails/shouter$ rails c
+Loading development environment (Rails 3.2.11)
+1.9.3-p385 :001 > User.find(:all)
+  User Load (0.6ms)  SELECT "users".* FROM "users" 
+ => [#<User id: 1, email: "adama@adama.info", password_digest: "$2a$10$MoLgGzU442O0nqusx69bo.nvF9FcQYcwqohjRlUVPRyU...", created_at: "2013-05-14 17:53:41", updated_at: "2013-05-14 17:53:41", username: "adama">, 
+ #<User id: 2, email: "mamesaye@mamesaye.com", password_digest: "$2a$10$0au0X82Zr2nBcCEQZUxExOz4k2scE.Uh.wy6JUZTz6Z1...", created_at: "2013-05-14 19:55:17", updated_at: "2013-05-14 19:55:17", username: "mamesaye">, 
+ #<User id: 3, email: "mmfa@mmfa.com", password_digest: "$2a$10$oCyRECXADeEzyMV2ch9z9uF3ScK6efoGuYB7WKs7w4VT...", created_at: "2013-05-22 16:47:13", updated_at: "2013-05-22 16:47:13", username: "mmfa">, 
+ #<User id: 5, email: "mama@mama.info", password_digest: "$2a$10$Lm4C6A8L4xUUrqhGuGUn1emVMzPnd7ID2aHR8fyQQP0M...", created_at: "2013-05-22 18:41:37", updated_at: "2013-05-22 18:41:37", username: "mama">, 
+ #<User id: 6, email: "babe@babe.net", password_digest: "$2a$10$Z1izTnCgqv0MNyT2bKLH9OkoS5F9e.n8d/4UJcvAJkkJ...", created_at: "2013-05-22 18:44:28", updated_at: "2013-05-22 18:44:28", username: "babe">, 
+ #<User id: 4, email: "sokhna@sokhna.org", password_digest: "$2a$10$jPFVA8D3hS/wwS1FcsNwP.dF2Hyi/GsrSWkz7awJNOyR...", created_at: "2013-05-22 18:33:16", updated_at: "2013-05-23 14:51:08", username: "sokhna">] 
+1.9.3-p385 :002 > exit
+adama@adama-OptiPlex-780:~/Documents/mmfa/THOUGHTBOT/intermediate-rails/shouter$ 

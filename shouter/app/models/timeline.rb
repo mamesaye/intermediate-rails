@@ -5,7 +5,8 @@ class Timeline
 		@user = user
 	end
 
-	#create function bc (is not an ActiveModel-compatible object that returns a valid partial path)
+	#create function bc ('#<Timeline:0x07 @user=#<User id:2,email:mame@saye.net, ..., username:"mame">>' 
+		#is not an ActiveModel-compatible object that returns a valid partial path) video3 -> 30.45
 	#def to_partial_path
 	#	"timelines/timeline"
 	#end
@@ -25,7 +26,7 @@ class Timeline
 	end
 
 	private
-	#use extract methode path to increase readability
+	#use extract method path to increase readability
 	def shout_user_ids
 		[@user.id] + @user.followed_user_ids
 	end

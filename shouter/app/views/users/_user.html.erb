@@ -1,5 +1,7 @@
 <br>
 <%= div_for user do %>
+<% if user.username %>
 <%= link_to user.username, user %>
  <br>
+ <% end %>
 <% end %>
